@@ -1,0 +1,58 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+*.ll
+*.bc
+*.dot
+*.pdf
+
+# Executables
+*.exe
+*.out
+*.app
+
+# binaries
+bin
+
+# CMake
+CMakeCache.txt
+CMakeFiles
+CMakeLists.txt.user
+cmake_install.cmake
+Makefile
+
+
+# QtCreator
+SVF-example.cflags
+SVF-example.config
+SVF-example.creator
+SVF-example.creator.user
+SVF-example.cxxflags
+SVF-example.files
+SVF-example.includes
+
+.idea
