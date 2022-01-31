@@ -47,12 +47,10 @@ Makefile
 
 
 # QtCreator
-SVF-example.cflags
-SVF-example.config
-SVF-example.creator
-SVF-example.creator.user
-SVF-example.cxxflags
-SVF-example.files
-SVF-example.includes
+svf-server.cflags
+svf-server.config
+svf-server.creator
+svf-server.cxxflags
+svf-server.files
+svf-server.includes
 
-.idea
