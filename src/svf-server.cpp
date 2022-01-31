@@ -29,10 +29,12 @@
 #include "Util/Options.h"
 #include <dlfcn.h>
 #include "svf-plugin.h"
+#include "ConsoleInput.h"
 
 #include <list>
 #include <boost/algorithm/string/classification.hpp>
 #include <boost/algorithm/string/split.hpp>
+#include <boost/algorithm/string/join.hpp>
 
 using namespace llvm;
 using namespace std;
@@ -117,17 +119,11 @@ int main(int argc, char ** argv)
     // server loop
     void *lib = NULL;
     Plugin *plugin = NULL;
-    string line;
+    ConsoleInput cli;
     string cmd;
     string opt;
     while (true) {
-        SVFUtil::outs() << "> ";
-        getline(std::cin, line);
-        std::list<std::string> args;
-        boost::split(args, line, boost::is_any_of(" "), boost::token_compress_on);
-        if (args.size() == 0) {
-            continue;
-        }
+        auto args = cli.readLine();
         cmd = *args.cbegin();
         args.pop_front();
         if (args.size() > 0) {
@@ -195,7 +191,7 @@ int main(int argc, char ** argv)
             }
             plugin->run(opt, args);
         } else {
-            SVFUtil::outs() << "Error: Invalid command: " << line << "\n";
+            SVFUtil::outs() << "Error: Invalid command: " << cmd << " " << opt << " " << boost::algorithm::join(args, " ") << "\n";
             usage();
         }
     }
