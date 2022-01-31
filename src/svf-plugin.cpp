@@ -16,7 +16,7 @@
  */
 
 #include "Util/SVFUtil.h"
-#include "svf-server.h"
+#include "svf-plugin.h"
 #include "WPA/Andersen.h"
 #include <list>
 #include <regex>

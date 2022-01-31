@@ -28,7 +28,7 @@
 #include "SVF-FE/SVFIRBuilder.h"
 #include "Util/Options.h"
 #include <dlfcn.h>
-#include "svf-server.h"
+#include "svf-plugin.h"
 
 #include <list>
 #include <boost/algorithm/string/classification.hpp>
