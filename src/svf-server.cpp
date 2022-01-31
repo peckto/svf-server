@@ -1,5 +1,5 @@
 /*
- * This file is part of the sfv-server distribution (https://github.com/peckto/svf-server.
+ * This file is part of the svf-server distribution (https://github.com/peckto/svf-server).
  * Copyright (c) 2022 Tobias Specht.
  *
  * This program is free software: you can redistribute it and/or modify
